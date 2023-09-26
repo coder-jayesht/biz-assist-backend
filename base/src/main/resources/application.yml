@@ -1,0 +1,23 @@
+server:
+  port: 8082
+
+spring:
+  config:
+    import: secrets.yml
+  application:
+    name: BASE
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+
+cloudinary:
+  brand-image-folder: biz-assist/brand-images
